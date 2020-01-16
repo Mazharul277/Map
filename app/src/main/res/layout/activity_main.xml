@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context=".MainActivity">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+      <Button
+          android:id="@+id/pharmacyBtn"
+          android:layout_width="205dp"
+          android:layout_height="47dp"
+          android:layout_alignParentStart="true"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentBottom="true"
+          android:layout_marginStart="223dp"
+          android:layout_marginLeft="223dp"
+          android:layout_marginEnd="5dp"
+          android:layout_marginRight="6dp"
+          android:layout_marginBottom="60dp"
+          android:background="@drawable/button_rounded"
+          android:text="Pharmacy" />
+
+      <Button
+          android:id="@+id/ambulanceBtn"
+          android:layout_width="205dp"
+          android:layout_height="47dp"
+          android:layout_alignParentStart="true"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentBottom="true"
+          android:layout_marginStart="225dp"
+          android:layout_marginLeft="225dp"
+          android:layout_marginEnd="3dp"
+          android:layout_marginRight="6dp"
+          android:layout_marginBottom="5dp"
+          android:text="Ambulance"
+          android:background="@drawable/button_rounded2"/>
+
+      <Button
+          android:id="@+id/doctorsBtn"
+          android:layout_width="205dp"
+          android:layout_height="47dp"
+          android:layout_alignParentStart="true"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentBottom="true"
+          android:layout_marginStart="4dp"
+          android:layout_marginLeft="6dp"
+          android:layout_marginEnd="224dp"
+          android:layout_marginRight="224dp"
+          android:layout_marginBottom="5dp"
+          android:text="Doctors"
+          android:background="@drawable/button_rounded"/>
+
+      <Button
+          android:id="@+id/hospitalsBtn"
+          android:layout_width="205dp"
+          android:layout_height="47dp"
+          android:layout_alignParentStart="true"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentBottom="true"
+          android:layout_marginStart="6dp"
+          android:layout_marginLeft="6dp"
+          android:layout_marginEnd="222dp"
+          android:layout_marginRight="222dp"
+          android:layout_marginBottom="60dp"
+          android:text="Hospitals"
+          android:background="@drawable/button_rounded2"/>
+
+      <fragment
+          android:id="@+id/google_map"
+          android:name="com.google.android.gms.maps.SupportMapFragment"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          tools:layout_editor_absoluteY="26dp" />
+
+   </RelativeLayout>
+
+   <include
+       layout="@layout/app_bar_navigation__drawer"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent" />
+
+   <com.google.android.material.navigation.NavigationView
+       android:id="@+id/nav_view"
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       android:layout_gravity="start"
+       android:fitsSystemWindows="true"
+       app:headerLayout="@layout/nav_header_navigation__drawer"
+       app:menu="@menu/activity_navigation__drawer_drawer" />
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
