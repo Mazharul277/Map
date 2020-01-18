@@ -87,7 +87,7 @@ public class Login_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(Login_Activity.this, "Logged in Successfully.", Toast.LENGTH_LONG).show();
-                Intent i = new Intent(Login_Activity.this, RegistationActivity.class);
+                Intent i = new Intent(Login_Activity.this, PatientRegister.class);
                 startActivity(i);
 
             }
