@@ -86,7 +86,6 @@ public class Login_Activity extends AppCompatActivity {
         mRegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Login_Activity.this, "Logged in Successfully.", Toast.LENGTH_LONG).show();
                 Intent i = new Intent(Login_Activity.this, PatientRegister.class);
                 startActivity(i);
 

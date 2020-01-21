@@ -23,4 +23,11 @@
 
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="name">name</string>
+    <string name="email">email</string>
+    <string name="address">address</string>
+    <string name="contactNo">contactNo</string>
+    <string name="city">city</string>
+    <string name="password">password</string>
+    <string name="user">user</string>
 </resources>

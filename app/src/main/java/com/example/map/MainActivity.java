@@ -28,6 +28,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback, NavigationView.OnNavigationItemSelectedListener {
 
@@ -35,7 +36,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
 
-    Button mHospital;
+    Button mHospital,mDoctor;
 
     Location currentLocation;
     FusedLocationProviderClient fusedLocationProviderClient;
@@ -62,6 +63,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         fusedLocationProviderClient=LocationServices.getFusedLocationProviderClient(this);
         fetchLastLocation();
 
+        mDoctor=findViewById(R.id.doctorsBtn);
 
         mHospital=(Button) findViewById(R.id.hospitalsBtn);
         mHospital.setOnClickListener(new View.OnClickListener() {
@@ -131,10 +133,25 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             Toast.makeText(this,"This is home",Toast.LENGTH_LONG).show();
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
         }
+        if (id==R.id.profileId)
+        {
+            startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+        }
         if (id==R.id.appoinmentId)
         {
             startActivity(new Intent(getApplicationContext(),Tabbed.class));
         }
+        if (id==R.id.appoinmentBookingId)
+        {
+            startActivity(new Intent(getApplicationContext(),AppointmentBookActivity.class));
+        }
+        if (id==R.id.logOutId)
+        {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getApplicationContext(),Login_Activity.class));
+            finish();
+        }
+
         return false;
     }
 }

@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".PatientRegister"></activity>
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".AppointmentBookActivity" />
+        <activity android:name=".PatientRegister" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
